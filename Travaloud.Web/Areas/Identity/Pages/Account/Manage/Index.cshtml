@@ -1,0 +1,15 @@
+﻿@page "/my-account/profile"
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+
+
+<div class="container pt-8 pb-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-8 has-parallax-scroll">
+            <partial name="_ProfilePartial" model="Model.Input" />
+        </div>
+    </div>
+</div>

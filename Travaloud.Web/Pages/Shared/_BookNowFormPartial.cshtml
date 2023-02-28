@@ -1,0 +1,43 @@
+﻿@model Travaloud.Core.Models.WebComponents.BookNowComponent
+
+<form method="post" id="@(Model.IsModal ? "bookNowModalForm" : "bookNowForm")" class="row @(Model.Floating ? "bg-light py-4 px-2 rounded" : "")">
+    <div class="col-lg-@(Model.IsModal ? "12" : "3") mb-3 mb-lg-@(Model.IsModal ? "3" : "0") position-relative">
+        <div class="h-100" style="min-height:47px;">
+            <select asp-for="PropertyId" class="select h-100 bg-white">
+                <option value="" hidden selected></option>
+                @foreach (var property in Model.Properties)
+                {
+                    if (property.CloudbedsKey != null)
+                    {
+                        <option value="@property.Id" selected="@(Model.PropertyId.HasValue && Model.PropertyId.Value == property.Id)">@property.Name</option>
+                    }
+                }
+            </select>
+            <label class="form-label select-label">Hostel</label>
+        </div>
+        <span asp-validation-for="PropertyId" class="travaloud-validation" style="bottom:-20px;"></span>
+    </div>
+    <div class="col-lg-@(Model.IsModal ? "12" : "3") mb-3 mb-lg-@(Model.IsModal ? "3" : "0") position-relative">
+        <div class="form-outline datepicker-disable-past h-100 w-100" style="min-height:47px;" id="checkInDatePicker" data-mdb-toggle-button="false" data-mdb-format="dd/mm/yyyy">
+            <input asp-for="CheckInDate" placeholder="Check In Date" type="text" class="form-control cursor-pointer h-100" data-mdb-toggle="datepicker" />
+            <label asp-for="CheckInDate" class="form-label">Check In</label>
+            <button class="datepicker-toggle-button" data-mdb-toggle="datepicker" aria-label="Check In">
+                <i class="fas fa-calendar-days datepicker-toggle-icon text-purple"></i>
+            </button>
+        </div>
+        <span asp-validation-for="CheckInDate" class="travaloud-validation" style="bottom:-20px;"></span>
+    </div>
+    <div class="col-lg-@(Model.IsModal ? "12" : "3") mb-3 mb-lg-@(Model.IsModal ? "3" : "0") position-relative">
+        <div class="form-outline datepicker-disable-past h-100 w-100" style="min-height:47px;" id="checkOutDatePicker" data-mdb-toggle-button="false" data-mdb-format="dd/mm/yyyy">
+            <input asp-for="CheckOutDate" placeholder="Check Out Date" type="text" class="form-control cursor-pointer h-100" data-mdb-toggle="datepicker" />
+            <label asp-for="CheckOutDate" class="form-label">Check Out</label>
+            <button class="datepicker-toggle-button" data-mdb-toggle="datepicker" aria-label="Check Out">
+                <i class="fas fa-calendar-days datepicker-toggle-icon text-purple"></i>
+            </button>
+        </div>
+        <span asp-validation-for="CheckOutDate" class="travaloud-validation" style="bottom:-20px;"></span>
+    </div>
+    <div class="col-lg-@(Model.IsModal ? "12" : "3")">
+        <button class="btn btn-primary w-100" type="submit" asp-page-handler="SearchRooms" aria-label="@(Model.Floating || Model.IsModal ? "Book Now" : "Search For Rooms")">@(Model.Floating || Model.IsModal ? "Book Now" : "Search For Rooms")</button>
+    </div>
+</form>

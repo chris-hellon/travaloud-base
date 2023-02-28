@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="MassTransit" />
+    <None Remove="Interfaces\" />
+    <None Remove="Models\" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Attributes\" />
+    <None Remove="Mappings\" />
+    <None Remove="Utils\" />
+    <None Remove="Interfaces\Repositories\" />
+    <None Remove="Interfaces\Services\" />
+    <None Remove="Microsoft.AspNetCore.Mvc" />
+    <None Remove="Dapper" />
+    <None Remove="Data\" />
+    <None Remove="Models\WebComponents\" />
+    <None Remove="Models\Identity\" />
+    <None Remove="Models\PageModels\" />
+    <None Remove="Models\WebComponents\FuseHostelsAndTravel\" />
+    <None Remove="DTOs\" />
+    <None Remove="Models\EmailTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Models\" />
+    <Folder Include="Attributes\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Data\" />
+    <Folder Include="Models\WebComponents\" />
+    <Folder Include="Models\Identity\" />
+    <Folder Include="Models\PageModels\" />
+    <Folder Include="Models\WebComponents\FuseHostelsAndTravel\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Models\EmailTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="AspNetCore.ReCaptcha" Version="1.7.0" />
+  </ItemGroup>
+</Project>

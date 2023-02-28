@@ -1,0 +1,14 @@
+﻿global using System;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using System.ComponentModel.DataAnnotations;
+global using Microsoft.AspNetCore.Mvc.RazorPages;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Mvc; 
+global using MassTransit;
+global using Travaloud.Core.Entities;
+global using Travaloud.Core.Entities.Catalog;
+global using Travaloud.Core.Utils;
+global using Travaloud.Core.Models;
+global using Travaloud.Core.Models.WebComponents;
+global using Microsoft.AspNetCore.Authorization;
+global using DefaultIdType = global::System.Guid;

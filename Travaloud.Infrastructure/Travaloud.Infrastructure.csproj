@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Travaloud.Core\Travaloud.Core.csproj" />
+    <ProjectReference Include="..\Travaloud.Web\Travaloud.Web.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Repositories\" />
+    <None Remove="Clients\" />
+    <None Remove="Contexts\" />
+    <None Remove="Services\" />
+    <None Remove="Dapper" />
+    <None Remove="MimeKit" />
+    <None Remove="MailKit" />
+    <None Remove="Rollbar" />
+    <None Remove="Microsoft.AspNetCore.Mvc" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Abstractions" />
+    <None Remove="Microsoft.AspNetCore.Mvc.ViewFeatures" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor" />
+    <None Remove="RestSharp" />
+    <None Remove="Azure.Storage.Blobs" />
+    <None Remove="MimeMapping" />
+    <None Remove="System.Data.SqlClient" />
+    <None Remove="Utils\" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="Microsoft.AspNetCore.Identity.UI" />
+    <None Remove="Rollbar.NetCore.AspNet" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+    <None Remove="AspNetCore.ReCaptcha" />
+    <None Remove="Microsoft.AspNetCore.Mvc.RazorPages" />
+    <None Remove="Microsoft.AspNetCore.Hosting.Abstractions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="Clients\" />
+    <Folder Include="Contexts\" />
+    <Folder Include="Services\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MimeKit" Version="3.5.0" />
+    <PackageReference Include="MailKit" Version="3.5.0" />
+    <PackageReference Include="Rollbar" Version="5.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="RestSharp" Version="108.0.3" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.14.1" />
+    <PackageReference Include="MimeMapping" Version="1.0.1.50" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.13" />
+    <PackageReference Include="Rollbar.NetCore.AspNet" Version="5.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.13" />
+    <PackageReference Include="AspNetCore.ReCaptcha" Version="1.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.RazorPages" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Travaloud.Core\Travaloud.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Pages\" />
+    <None Remove="Pages\PropertyBooking\" />
+    <None Remove="Pages\Shared\" />
+    <None Remove="Pages\Shared\DisplayTemplates\" />
+    <None Remove="Microsoft.AspNetCore.Components.Web" />
+    <None Remove="Microsoft.AspNetCore.Components" />
+    <None Remove="Pages\RobotsTxt\" />
+    <None Remove="Pages\Sitemap\" />
+    <None Remove="AspNetCore.SEOHelper" />
+    <None Remove="Pages\EmailTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Pages\PropertyBooking\" />
+    <Folder Include="Pages\Shared\" />
+    <Folder Include="Pages\Shared\DisplayTemplates\" />
+    <Folder Include="Pages\RobotsTxt\" />
+    <Folder Include="Pages\Sitemap\" />
+    <Folder Include="Pages\EmailTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.13" />
+    <PackageReference Include="AspNetCore.SEOHelper" Version="1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.13" />
+  </ItemGroup>
+</Project>
